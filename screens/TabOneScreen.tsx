@@ -18,7 +18,6 @@ export default class TabOneScreen extends React.Component {
     this.setState({ isLoading: true });
     fetch(`https://randomuser.me/api/?results=1000&nat=de&noinfo`).then((res) =>
       res.json().then((json) => {
-        // console.log(json);
         this.setState({ data: json.results, isLoading: false });
       })
     );
